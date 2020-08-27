@@ -1,0 +1,67 @@
+$color-primary: #e6ac00;
+$color-secondary: #101d2c;
+$color-white: #fff;
+$color-black: #000;
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+$color-link: #0275d8;
+
+$font-display: "Lato", sans-serif;
+$font-heading: "Bebas Neue", cursive;
+$font-heading-1: "Merriweather Sans", sans-serif;
+
+$bp-largest: 68.75em;
+$bp-large: 62.5em;
+$bp-medium: 54.68em;
+$bp-small: 40.625em;
+$bp-smallest: 28.125em;
+$bp-tiny: 20em;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media screen and (max-width: $bp-small) {
+    font-size: 58.5%;
+  }
+}
+
+body {
+  font-family: $font-display;
+  font-weight: 400;
+  color: $color-grey-dark-2;
+  background-color: $color-grey-light-1;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 70vh;
+  grid-template-columns:
+    [full-start]minmax(6rem, 1fr) [center-start ] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end]minmax(6rem, 1fr) [full-end];
+
+  @media screen and (max-width: $bp-small) {
+    grid-template-columns:
+      [full-start]minmax(2rem, 1fr) [center-start ] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end]minmax(2rem, 1fr) [full-end];
+  }
+  @media screen and (max-width: $bp-smallest) {
+    grid-template-rows: minmax(60vh, max-content) minmax(40vh, max-content);
+  }
+}

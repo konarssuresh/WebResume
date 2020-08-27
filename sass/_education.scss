@@ -1,0 +1,63 @@
+.education {
+  padding-top: 3rem;
+  grid-column: center-start/center-end;
+
+  &__heading {
+    grid-column: 1/-1;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  &__logo {
+    fill: $color-grey-dark-2;
+    width: 3rem;
+    height: 3rem;
+    @media screen and (max-width: $bp-smallest) {
+      height: 2rem;
+    }
+  }
+
+  &__institute {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    @media screen and (max-width: $bp-small) {
+      grid-template-columns: 4rem 1fr 4rem;
+    }
+    grid-row-gap: 2rem;
+
+    &-title {
+      grid-column: 1/-1;
+      grid-row: 1 / span 1;
+      justify-self: center;
+    }
+    &-location {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+      justify-self: start;
+      font-size: 1.5rem;
+      @media screen and (max-width: $bp-large) {
+        grid-column: 2 / span 1;
+      }
+    }
+    &-timeline {
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1;
+      justify-self: end;
+      font-size: 1.5rem;
+      @media screen and (max-width: $bp-large) {
+        grid-column: 2 / span 1;
+      }
+    }
+    &-learnings {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+      font-size: 1.5rem;
+      justify-self: center;
+      @media screen and (max-width: $bp-large) {
+        grid-row: 3 / span 1;
+      }
+    }
+  }
+}

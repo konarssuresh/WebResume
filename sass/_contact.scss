@@ -1,0 +1,42 @@
+.contact {
+  background-color: $color-secondary;
+  grid-column: col-start 6 / full-end;
+
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-column-gap: 1.5rem;
+  align-items: center;
+  padding: 3rem;
+  @media screen and (max-width: $bp-largest) {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(3, min-content 1fr);
+    grid-row-gap: 2rem;
+  }
+  @media screen and (max-width: $bp-medium) {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(2, min-content 1fr);
+    grid-row-gap: 2rem;
+  }
+  @media screen and (max-width: $bp-small) {
+    padding-top: 0;
+    grid-column: 1/-1;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 2rem;
+  }
+
+  &__logo {
+    height: 4rem;
+    width: 4rem;
+    fill: $color-grey-dark-2;
+  }
+  &__details {
+    a {
+      text-decoration: none;
+      font-size: 1.9rem;
+      color: $color-grey-dark-2;
+      @media screen and (max-width: $bp-smallest) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

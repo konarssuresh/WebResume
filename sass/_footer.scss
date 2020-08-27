@@ -1,0 +1,10 @@
+.footer {
+  margin-top: 3rem;
+  padding: 4rem;
+  text-align: center;
+  background-color: $color-secondary;
+  grid-column: full-start/full-end;
+  justify-items: center;
+  font-size: 1.3rem;
+  color: $color-grey-light-2;
+}

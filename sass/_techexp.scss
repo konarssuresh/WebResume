@@ -1,0 +1,25 @@
+.techexp {
+  padding-top: 3rem;
+  grid-column: center-start/center-end;
+
+  &__heading {
+    grid-column: 1/-1;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__logo {
+    fill: $color-grey-dark-2;
+    width: 3rem;
+    height: 3rem;
+    @media screen and (max-width: $bp-smallest) {
+      height: 2rem;
+    }
+  }
+  ul {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+  }
+}
